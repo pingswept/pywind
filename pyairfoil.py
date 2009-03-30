@@ -1,3 +1,24 @@
+#!/usr/bin/python
+
+#    Program for for modeling the geometry of wind turbine blades
+
+#    Copyright 2009 Brandon Stafford
+#
+#    This file is part of Pywind.
+#
+#    Pywind is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    Pywind is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License along
+#    with Pywind. If not, see <http://www.gnu.org/licenses/>.
+
 import csv
 from math import *
 from enthought.mayavi import mlab
