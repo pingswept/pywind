@@ -21,7 +21,7 @@
 
 import csv
 from math import *
-from enthought.mayavi import mlab
+#from enthought.mayavi import mlab
 import numpy as np
 
 def getCoordinates(coordString):
@@ -54,8 +54,14 @@ profile = [buildAirfoil(pairs, station) for station in blade]
 pts = np.vstack(np.array(profile))
 
 # grab x-position for colormap
-colors = pts[:,0]
+#colors = pts[:,0]
 
 # plot the points
-s = mlab.points3d(pts[:,0], pts[:,1], pts[:,2], colors, scale_mode = 'none', colormap='Spectral', scale_factor = 0.0015)
+#s = mlab.points3d(pts[:,0], pts[:,1], pts[:,2], colors, scale_mode = 'none', colormap='Spectral', scale_factor = 0.0015)
+
+# write points to a file
+outfile = open("airfoil.txt", "w")
+for point in pts:
+	# +1's below are cheats to make everything positive
+    outfile.write('% 0.4f\t% 0.4f\t% 0.4f\n' % (point[0]+1, point[1]+1, point[2]+1)) 
 
